@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Sections */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Skills */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    background: #222;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 20px;
+}
+
+/* Contact */
+#contact p {
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
