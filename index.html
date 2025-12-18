@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srivardhan's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h1>Srivardhan</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Header -->
-    <header>
-        <h1>srivardhan</h1>
-        <p>Web Developer | Designer | Programmer</p>
-    </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm Srivardhan, a passionate web developer. I love creating interactive and responsive websites.</p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate developer who enjoys building clean and responsive websites.
-            I love learning new technologies and improving my skills.
-        </p>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cube-container">
+      <div class="cube">
+        <div class="face front">Website</div>
+        <div class="face back">Todo App</div>
+        <div class="face right">Weather App</div>
+        <div class="face left">Portfolio</div>
+        <div class="face top">API Project</div>
+        <div class="face bottom">Game App</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React.js, Node.js</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-response"></p>
+  </section>
 
-        <div class="project">
-            <h3>Project One</h3>
-            <p>Simple website built using HTML and CSS.</p>
-        </div>
+  <footer>
+    <p>&copy; 2025 Srivardhan. All rights reserved.</p>
+  </footer>
 
-        <div class="project">
-            <h3>Project Two</h3>
-            <p>Responsive portfolio design.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: yourname@email.com</p>
-        <p>GitHub: github.com/yourusername</p>
-        <p>LinkedIn: linkedin.com/in/yourusername</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Your Name. All Rights Reserved.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
