@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Machine Learning Clinical Risk Screening</p>
+    <h1>Heart Disease Prediction</h1>
+    <p class="lede">Enter clinical measurements and receive a model-based risk estimate using a trained Scikit-learn pipeline.</p>
+    <a class="button" href="{{ url_for('predict') }}">Start Prediction</a>
+  </div>
+</section>
+<section class="metrics-strip">
+  <div><strong>13</strong><span>Clinical inputs</span></div>
+  <div><strong>3</strong><span>Models compared</span></div>
+  <div><strong>5-fold</strong><span>Cross validation</span></div>
+</section>
+{% endblock %}
+

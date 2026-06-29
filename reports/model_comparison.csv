@@ -1,0 +1,5 @@
+model,accuracy,precision,recall,f1_score,confusion_matrix
+Logistic Regression,0.6721,0.875,0.7,0.7778,"[[6, 5], [15, 35]]"
+Random Forest,0.8361,0.8448,0.98,0.9074,"[[2, 9], [1, 49]]"
+SVM,0.7541,0.8889,0.8,0.8421,"[[6, 5], [10, 40]]"
+Optimized Random Forest,0.8361,0.8448,0.98,0.9074,"[[2, 9], [1, 49]]"

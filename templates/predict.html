@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Predict Risk{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <h1>Prediction Form</h1>
+  <p>Provide the patient parameters below.</p>
+</section>
+
+{% if errors %}
+<div class="alert">
+  {% for error in errors %}
+  <p>{{ error }}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+<form class="prediction-form" method="post" action="{{ url_for('predict') }}" novalidate>
+  <label>Age
+    <input name="age" type="number" min="1" max="120" value="{{ values.get('age', '') }}" required>
+  </label>
+  <label>Sex
+    <select name="sex" required>
+      <option value="">Select</option>
+      <option value="1" {% if values.get('sex') == '1' %}selected{% endif %}>Male</option>
+      <option value="0" {% if values.get('sex') == '0' %}selected{% endif %}>Female</option>
+    </select>
+  </label>
+  <label>Chest Pain Type
+    <select name="cp" required>
+      {% for value, label in [(0, 'Typical angina'), (1, 'Atypical angina'), (2, 'Non-anginal pain'), (3, 'Asymptomatic')] %}
+      <option value="{{ value }}" {% if values.get('cp') == value|string %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Resting Blood Pressure
+    <input name="trestbps" type="number" min="70" max="230" value="{{ values.get('trestbps', '') }}" required>
+  </label>
+  <label>Cholesterol
+    <input name="chol" type="number" min="80" max="650" value="{{ values.get('chol', '') }}" required>
+  </label>
+  <label>Fasting Blood Sugar &gt; 120
+    <select name="fbs" required>
+      <option value="0" {% if values.get('fbs') == '0' %}selected{% endif %}>No</option>
+      <option value="1" {% if values.get('fbs') == '1' %}selected{% endif %}>Yes</option>
+    </select>
+  </label>
+  <label>Resting ECG
+    <select name="restecg" required>
+      <option value="0" {% if values.get('restecg') == '0' %}selected{% endif %}>Normal</option>
+      <option value="1" {% if values.get('restecg') == '1' %}selected{% endif %}>ST-T abnormality</option>
+      <option value="2" {% if values.get('restecg') == '2' %}selected{% endif %}>LV hypertrophy</option>
+    </select>
+  </label>
+  <label>Maximum Heart Rate
+    <input name="thalach" type="number" min="50" max="230" value="{{ values.get('thalach', '') }}" required>
+  </label>
+  <label>Exercise Induced Angina
+    <select name="exang" required>
+      <option value="0" {% if values.get('exang') == '0' %}selected{% endif %}>No</option>
+      <option value="1" {% if values.get('exang') == '1' %}selected{% endif %}>Yes</option>
+    </select>
+  </label>
+  <label>Oldpeak
+    <input name="oldpeak" type="number" min="0" max="7" step="0.1" value="{{ values.get('oldpeak', '') }}" required>
+  </label>
+  <label>Slope
+    <select name="slope" required>
+      <option value="0" {% if values.get('slope') == '0' %}selected{% endif %}>Upsloping</option>
+      <option value="1" {% if values.get('slope') == '1' %}selected{% endif %}>Flat</option>
+      <option value="2" {% if values.get('slope') == '2' %}selected{% endif %}>Downsloping</option>
+    </select>
+  </label>
+  <label>Major Vessels
+    <input name="ca" type="number" min="0" max="3" value="{{ values.get('ca', '') }}" required>
+  </label>
+  <label>Thalassemia
+    <select name="thal" required>
+      <option value="1" {% if values.get('thal') == '1' %}selected{% endif %}>Normal</option>
+      <option value="2" {% if values.get('thal') == '2' %}selected{% endif %}>Fixed defect</option>
+      <option value="3" {% if values.get('thal') == '3' %}selected{% endif %}>Reversible defect</option>
+    </select>
+  </label>
+  <button class="button" type="submit">Predict Risk</button>
+</form>
+{% endblock %}
+

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Prediction Result{% endblock %}
+{% block content %}
+<section class="result-panel">
+  <p class="eyebrow">Prediction Result</p>
+  <h1>{{ result.label }}</h1>
+  {% if result.risk_probability is not none %}
+  <p class="probability">{{ result.risk_probability }}% estimated risk probability</p>
+  {% endif %}
+  <a class="button" href="{{ url_for('predict') }}">Run Another Prediction</a>
+</section>
+{% endblock %}
+

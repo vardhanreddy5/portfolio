@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <h1>About Project</h1>
+  <p>This system trains Logistic Regression, Random Forest, and SVM classifiers, then deploys the optimized model with Flask.</p>
+</section>
+<section class="feature-list">
+  {% for key, description in features.items() %}
+  <article>
+    <strong>{{ key }}</strong>
+    <span>{{ description }}</span>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
+
